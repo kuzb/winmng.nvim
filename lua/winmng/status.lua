@@ -48,7 +48,7 @@ M.restore = function(opts)
 
   for win, win_opts in pairs(opts.win) do
     for opt, val in pairs(win_opts) do
-      vim.wo[win][opt] = val
+      vim.wo[win][opt] = tostring(val)
     end
   end
 end
